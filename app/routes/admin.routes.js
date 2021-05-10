@@ -18,6 +18,9 @@ module.exports = app => {
     // Retrieve all unread Tutor
     router.get("/not-read", admin.findAllUnread);
 
+    //update read to true
+    router.put('/read-to-true/:id', admin.readToTrue)
+
     // Retrieve a single Tutor with id
     router.get("/find-tutor/:id", admin.findOne);
 

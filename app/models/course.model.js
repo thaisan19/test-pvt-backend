@@ -4,7 +4,7 @@ const { Schema } = require("mongoose");
 module.exports = mongoose => {
   var schema = mongoose.Schema(
     {
-      createdBy: {type: String, required: false},
+      createdBy: {type: String, required: true},
       courseLength: {type: String, required: false},
       courseDesc: {type: String, required: false},
       courseExpectation: {type: String, required: false},
@@ -12,11 +12,11 @@ module.exports = mongoose => {
       tutoringHours: {type: Array, require: false},
       tutoringDays: {type: Array, require: false},
       name: {type: String, required: true},
-      Price: {type: String, required: true},
+      price: {type: String, required: true},
       tutorCourses:{
           type: Schema.Types.ObjectId,
           ref: 'Tutor',
-          require: true
+          require: false
       },
       
     },

@@ -105,6 +105,20 @@ exports.findOne = async (req, res, next) => {
         next(err)
       };
   };
+
+  //Update read to true
+exports.readToTrue = async(req, res, next) => {
+  try {
+    const ID = req.params.id;
+    const tutor = await Tutor.findOne({ _id: ID })
+    tutor.role = true
+    await tutor.save()
+    res.send("Update read successfully")
+  } catch (error) {
+    next(error)
+  }
+}
+
 //SendEmail
 exports.sendEmail = async (req, res, next) => {
     if (!req.body) {

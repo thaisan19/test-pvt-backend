@@ -11,10 +11,10 @@ exports.create = async (req, res) => {
       res.status(400).send({ message: "Content can not be empty!" });
       return;
     }
-    if (!req.body.tutorCourses) {
-      res.status(400).send({ message: "Content can not be empty!" });
-      return;
-  }
+  //   if (!req.body.tutorCourses) {
+  //     res.status(400).send({ message: "Content can not be empty!" });
+  //     return;
+  // }
       const course = new Course(req.body);
       await course.save()
 
