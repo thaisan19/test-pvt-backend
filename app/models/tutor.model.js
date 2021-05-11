@@ -15,8 +15,8 @@ module.exports = mongoose => {
       monthlyRate: {type: String, required: true},
       eduBackground: {type: String, required: true},
       achievement: {type: String, required: true},
-      profile: {type: Buffer, require: false },
-      cv: {type: Buffer, require: false },
+      // profile: {type: Buffer, require: false },
+      // cv: {type: Buffer, require: true },
       published: Boolean,
       role: {
         type: String,

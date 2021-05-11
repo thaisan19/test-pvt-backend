@@ -9,7 +9,7 @@ const registerSchema = Joi.object({
     aboutMe: Joi.required(),
     eduBackground: Joi.required(),
     monthlyRate: Joi.required(),
-    achievement: Joi.required()
+    achievement: Joi.required(),
     // profile: Joi.binary().max(5000000).required(),
     // cv: Joi.binary().max(5000000).required()
 });
@@ -24,7 +24,7 @@ const updateSchema = Joi.object({
     eduBackground: Joi.string(),
     monthlyRate: Joi.string(),
     achievement: Joi.string(),
-    read: Joi.boolean()
+    read: Joi.boolean(),
     // profile: Joi.binary().max(5000000).required(),
     // cv: Joi.binary().max(5000000).required()
 });

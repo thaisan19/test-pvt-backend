@@ -111,7 +111,7 @@ exports.readToTrue = async(req, res, next) => {
   try {
     const ID = req.params.id;
     const tutor = await Tutor.findOne({ _id: ID })
-    tutor.role = true
+    tutor.read = true
     await tutor.save()
     res.send("Update read successfully")
   } catch (error) {
