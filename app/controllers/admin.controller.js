@@ -53,7 +53,7 @@ exports.createTutor = async(req, res, next) => {
 
       const url = req.protocol + "://" + req.get('host')
       for (var i = 0; i < req.files.length; i++){
-       tutor.files.push(url + '/uploads/' + req.files[i].filename)
+       tutor.files.push(url + '/images/' + req.files[i].filename)
       }
 
 
