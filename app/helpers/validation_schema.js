@@ -10,8 +10,6 @@ const registerSchema = Joi.object({
     eduBackground: Joi.required(),
     monthlyRate: Joi.required(),
     achievement: Joi.required(),
-    // profile: Joi.binary().max(5000000).required(),
-    // cv: Joi.binary().max(5000000).required()
 });
 const updateSchema = Joi.object({
     fullName: Joi.string(),
@@ -25,8 +23,6 @@ const updateSchema = Joi.object({
     monthlyRate: Joi.string(),
     achievement: Joi.string(),
     read: Joi.boolean(),
-    // profile: Joi.binary().max(5000000).required(),
-    // cv: Joi.binary().max(5000000).required()
 });
 module.exports = {
     registerSchema,
